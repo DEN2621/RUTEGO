@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Список товаров</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="products">
+			<div class="product">
+				<img class="photo" src="product1.jpg" alt="Товар 1">
+				<p class="name">Монтажный клей Момент Монтаж Суперсильный Плюс МВ-100 (400 г) 0.31 л картридж</p>
+				<p class="price">586₽</p>
+				<button class="orderBtn" data-product="1">Заказать</button>
+			</div>
+			<div class="product">
+				<img class="photo" src="product2.jpg" alt="Товар 2">
+				<p class="name">Двусторонний скотч 3M 6009F двусторонняя, прозрачная клейкая лента, для постоянной, сильной фиксации 10ммх5м</p>
+				<p class="price">385₽</p>
+				<button class="orderBtn" data-product="2">Заказать</button>
+			</div>
+			<div class="product">
+				<img class="photo" src="product3.jpg" alt="Товар 3">
+				<p class="name">Крепежный универсальный дюбель для крышки сиденья унитаза</p>
+				<p class="price">664₽</p>
+				<button class="orderBtn" data-product="3">Заказать</button>
+			</div>
+			<div class="product">
+				<img class="photo" src="product4.jpg" alt="Товар 4">
+				<p class="name">Органайзер для мелочей Blocker Expert модульный, 16 модулей, серо-свинцовый/оранжевый</p>
+				<p class="price">1159₽</p>
+				<button class="orderBtn" data-product="4">Заказать</button>
+			</div>
+			<div id="orderModal" style="display: none;">
+				<h2>Оформление заказа</h2>
+				<form id="orderForm" method="post">
+					<label for="fullName">ФИО:</label>
+					<input type="text" name="fullName" id="fullName">
+					<br>
+					<br>
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email">
+					<br>
+					<br>
+					<input type="hidden" name="product" id="product">
+					<input type="submit" value="Заказать">
+				</form>
+				<div id="response"></div>
+			</div>
+		</div>
+	</body>
+</html>
